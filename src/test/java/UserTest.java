@@ -51,4 +51,22 @@ public class UserTest {
 		boolean result=u.lastNameofUser("Java");
 		assertFalse(result);
 	}
+	/**
+	 * 5.Test method to check  email id is valid
+	 */
+	@Test
+	public void checkValidEmail()
+	{
+		boolean result=u.emaiIdofUser("abc@yahoo.com");
+		assertTrue(result);
+	}
+	/**
+	 * 5.Test method to check email id is invalid
+	 */
+	@Test
+	public void checkInValidEmail()
+	{
+		boolean result=u.emaiIdofUser("abc@%*.com");
+		assertFalse(result);
+	}
 }

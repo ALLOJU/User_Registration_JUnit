@@ -69,5 +69,29 @@ public class UserRegistration {
 		}
 		return m.matches();
 	}
+	/**
+	 * Method to perform validations on user input as Emails
+	 * @param email - email ids of the user
+	 * @return - returns true or false based on the condition
+	 */
+	public boolean emaiIdofUser(String email) {
+		regex="^[\\w!#$%&’*+/=?`{|}~^-]+(?:\\.[\\w!#$%&’*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$";
+		Pattern p=Pattern.compile(regex);
+		
+		/**
+		 * Pattern class contains matcher() method  to find matching between given lastname
+           and regular expression.
+		 */
+		Matcher m=p.matcher(email);
+		System.out.println(m.matches());
+		if(m.matches()) {
+			System.out.println("Email Id  Valid");
+		}
+		else {
+			System.out.println("Email Id Not Valid");
+
+		}
+		return m.matches();
+	}
 
 }

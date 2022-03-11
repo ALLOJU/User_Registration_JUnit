@@ -43,5 +43,31 @@ public class UserRegistration {
 		}
 		return m.matches();
 	}
+	/**
+	 * Method to perform validations on user input as last name
+	 * @param lastName - input name of the user
+	 * @return - returns true or false based on the condition
+	 */
+	public boolean lastNameofUser(String lastName) {
+		regex="^[A-Z][a-z]{2}";
+		Pattern p=Pattern.compile(regex);
+		if (lastName == null) {
+			return false;
+		}
+		/**
+		 * Pattern class contains matcher() method  to find matching between given lastname
+           and regular expression.
+		 */
+		Matcher m=p.matcher(lastName);
+		System.out.println(m.matches());
+		if(m.matches()==true) {
+			System.out.println("Last Name  Valid");
+		}
+		else {
+			System.out.println("Last name should start with Capital letter and has minimum 3 character");
+
+		}
+		return m.matches();
+	}
 
 }

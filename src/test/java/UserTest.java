@@ -70,7 +70,7 @@ public class UserTest {
 		assertFalse(result);
 	}
 	/**
-	 * 5.Test method to check  mobile number is valid
+	 * 7.Test method to check  mobile number is valid
 	 */
 	@Test
 	public void checkValidPhone()
@@ -79,12 +79,30 @@ public class UserTest {
 		assertTrue(result);
 	}
 	/**
-	 * 6.Test method to check mobile number is invalid
+	 * 8.Test method to check mobile number is invalid
 	 */
 	@Test
 	public void checkInValidPhone()
 	{
 		boolean result=u.mobileNumberOfUser("457534");
+		assertFalse(result);
+	}
+	/**
+	 * 7.Test method to check  mobile number is valid
+	 */
+	@Test
+	public void checkValidPassword()
+	{
+		boolean result=u.passwordOfUser("Password@123");
+		assertTrue(result);
+	}
+	/**
+	 * 8.Test method to check mobile number is invalid
+	 */
+	@Test
+	public void checkInValidPassword()
+	{
+		boolean result=u.passwordOfUser("Passwor@d@123");
 		assertFalse(result);
 	}
 }

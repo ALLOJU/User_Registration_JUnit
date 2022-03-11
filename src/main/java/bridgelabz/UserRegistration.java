@@ -93,5 +93,26 @@ public class UserRegistration {
 		}
 		return m.matches();
 	}
+	/**
+	 * Method used to perform mobile number validations using regular expression
+	 * @param phone - input phone number given by the user
+	 * @return - it returns true or false based on the given regular expression
+	 */
+	public boolean mobileNumberOfUser(String phone) {
+		
+		regex="^([0-9]{2}[\\s]){1}[0-9]{9,10}$";
+		
+		Pattern p=Pattern.compile(regex);
+		Matcher m=p.matcher(phone);
+		System.out.println(m.matches());
+		if(m.matches()) {
+			System.out.println("Phone NUmber is Valid");
+		}
+		else {
+			System.out.println("Phone NUmber is Not Valid");
+
+		}
+		return m.matches();
+	}
 
 }

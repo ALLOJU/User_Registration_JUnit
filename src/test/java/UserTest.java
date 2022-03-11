@@ -61,12 +61,30 @@ public class UserTest {
 		assertTrue(result);
 	}
 	/**
-	 * 5.Test method to check email id is invalid
+	 * 6.Test method to check email id is invalid
 	 */
 	@Test
 	public void checkInValidEmail()
 	{
 		boolean result=u.emaiIdofUser("abc@%*.com");
+		assertFalse(result);
+	}
+	/**
+	 * 5.Test method to check  mobile number is valid
+	 */
+	@Test
+	public void checkValidPhone()
+	{
+		boolean result=u.mobileNumberOfUser("91 9866349586");
+		assertTrue(result);
+	}
+	/**
+	 * 6.Test method to check mobile number is invalid
+	 */
+	@Test
+	public void checkInValidPhone()
+	{
+		boolean result=u.mobileNumberOfUser("457534");
 		assertFalse(result);
 	}
 }

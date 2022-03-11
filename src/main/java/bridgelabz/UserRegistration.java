@@ -4,6 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UserRegistration {
+	
 	public String regex;
 	/**
 	 * Method to perform validations on user input as first name

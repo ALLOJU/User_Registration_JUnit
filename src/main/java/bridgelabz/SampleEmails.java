@@ -12,7 +12,7 @@ public class SampleEmails {
 	/**
 	 * list of valid emails taken as string array
 	 */
-	static String[] validEmails= {"abc@yahoo.com,","abc-100@yahoo.com","abc.100@yahoo.com","abc111@abc.com","abc-100@abc.net",
+	static String[] validEmails= {"abc-100@yahoo.com","abc.100@yahoo.com","abc111@abc.com","abc-100@abc.net",
 			"abc.100@abc.com.au","abc@1.com","abc@gmail.com.com","abc+100@gmail.com"};
 	/**
 	 * list of Invalid emails taken as string array
@@ -24,8 +24,9 @@ public class SampleEmails {
 	
 	/**
 	 * Method to check valid emails whether they are valid or not
+	 * @return 
 	 */
-	public void TestForValidEmails() {
+	public boolean TestForValidEmails() {
 		System.out.println("------Valid Emails----------");
 		for(int i=0;i<validEmails.length;i++) {
 			String regex="^[\\w!#$%&’*+/=?`{|}~^-]+(?:\\.[\\w!#$%&’*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$";
@@ -39,11 +40,13 @@ public class SampleEmails {
 			}
 			
 		}
+		return true;
 	}
 	/**
 	 * Method to check Invalid emails whether they are valid or not
+	 * @return 
 	 */
-	public void TestForInValidEmails() {
+	public boolean TestForInValidEmails() {
 		System.out.println("---------InValid  Emails----------");
 		for(int i=0;i<InvalidEmails.length;i++) {
 			String regex="^[\\\\w!#$%&’*+/=?`{|}~^-]+(?:\\\\.[\\\\w!#$%&’*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\\\.)+[a-zA-Z]{2,6}$";
@@ -57,6 +60,7 @@ public class SampleEmails {
 			}
 			
 		}
+		return false;
 	}
 	
 }
